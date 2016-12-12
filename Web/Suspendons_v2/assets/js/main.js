@@ -1,17 +1,18 @@
 /*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Reflex by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
 */
 
 (function($) {
 
 	skel.breakpoints({
-		wide: '(min-width: 961px) and (max-width: 1880px)',
-		normal: '(min-width: 961px) and (max-width: 1620px)',
-		narrow: '(min-width: 961px) and (max-width: 1320px)',
-		narrower: '(max-width: 960px)',
-		mobile: '(max-width: 736px)'
+		xlarge: '(max-width: 1680px)',
+		large: '(max-width: 1280px)',
+		medium: '(max-width: 980px)',
+		small: '(max-width: 736px)',
+		xsmall: '(max-width: 480px)',
+		xxsmall: '(max-width: 360px)'
 	});
 
 	$(function() {
@@ -23,96 +24,122 @@
 			$body.addClass('is-loading');
 
 			$window.on('load', function() {
-				$body.removeClass('is-loading');
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
 			});
-
-		// CSS polyfills (IE<9).
-			if (skel.vars.IEVersion < 9)
-				$(':last-child').addClass('last-child');
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
 
-		// Prioritize "important" elements on mobile.
-			skel.on('+mobile -mobile', function() {
+		// Prioritize "important" elements on medium.
+			skel.on('+medium -medium', function() {
 				$.prioritize(
-					'.important\\28 mobile\\29',
-					skel.breakpoint('mobile').active
+					'.important\\28 medium\\29',
+					skel.breakpoint('medium').active
 				);
 			});
 
-		// Scrolly links.
-			$('.scrolly').scrolly();
+		// Menu.
+			var $menu = $('#menu'),
+				$menuInner;
 
-		// Nav.
-			var $nav_a = $('#nav a');
+			$menu.wrapInner('<div class="inner"></div>');
+			$menuInner = $menu.children('.inner');
+			$menu._locked = false;
 
-			// Scrolly-fy links.
-				$nav_a
-					.scrolly()
-					.on('click', function(e) {
+			$menu._lock = function() {
 
-						var t = $(this),
-							href = t.attr('href');
+				if ($menu._locked)
+					return false;
 
-						if (href[0] != '#')
-							return;
+				$menu._locked = true;
 
-						e.preventDefault();
+				window.setTimeout(function() {
+					$menu._locked = false;
+				}, 350);
 
-						// Clear active and lock scrollzer until scrolling has stopped
-							$nav_a
-								.removeClass('active')
-								.addClass('scrollzer-locked');
+				return true;
 
-						// Set this link to active
-							t.addClass('active');
+			};
 
-					});
+			$menu._show = function() {
 
-			// Initialize scrollzer.
-				var ids = [];
+				if ($menu._lock())
+					$menu.addClass('visible');
 
-				$nav_a.each(function() {
+			};
+
+			$menu._hide = function() {
+
+				if ($menu._lock())
+					$menu.removeClass('visible');
+
+			};
+
+			$menu._toggle = function() {
+
+				if ($menu._lock())
+					$menu.toggleClass('visible');
+
+			};
+
+			$menuInner
+				.on('click', function(event) {
+					event.stopPropagation();
+				})
+				.on('click', 'a', function(event) {
 
 					var href = $(this).attr('href');
 
-					if (href[0] != '#')
-						return;
+					event.preventDefault();
+					event.stopPropagation();
 
-					ids.push(href.substring(1));
+					// Hide.
+						$menu._hide();
+
+					// Redirect.
+						window.setTimeout(function() {
+							window.location.href = href;
+						}, 250);
 
 				});
 
-				$.scrollzer(ids, { pad: 200, lastHack: true });
+			$menu
+				.appendTo($body)
+				.on('click', function(event) {
 
-		// Header (narrower + mobile).
+					event.stopPropagation();
+					event.preventDefault();
 
-			// Toggle.
-				$(
-					'<div id="headerToggle">' +
-						'<a href="#header" class="toggle"></a>' +
-					'</div>'
-				)
-					.appendTo($body);
+					$menu.removeClass('visible');
 
-			// Header.
-				$('#header')
-					.panel({
-						delay: 500,
-						hideOnClick: true,
-						hideOnSwipe: true,
-						resetScroll: true,
-						resetForms: true,
-						side: 'left',
-						target: $body,
-						visibleClass: 'header-visible'
-					});
+				})
+				.append('<a class="close" href="#menu">Close</a>');
 
-			// Fix: Remove transitions on WP<10 (poor/buggy performance).
-				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
-					$('#headerToggle, #header, #main')
-						.css('transition', 'none');
+			$body
+				.on('click', 'a[href="#menu"]', function(event) {
+
+					event.stopPropagation();
+					event.preventDefault();
+
+					// Toggle.
+						$menu._toggle();
+
+				})
+				.on('click', function(event) {
+
+					// Hide.
+						$menu._hide();
+
+				})
+				.on('keydown', function(event) {
+
+					// Hide on escape.
+						if (event.keyCode == 27)
+							$menu._hide();
+
+				});
 
 	});
 

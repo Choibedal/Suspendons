@@ -1,4 +1,18 @@
-<?php include "header.php";?>
+<?php include 'header.php';?>
+
+<style type="text/css">
+    html,
+    body {
+        height: 100%
+    }
+
+    #map-canvas {
+        min-width: 200px;
+        width: 100%;
+        min-height: 200px;
+        height: 100%;
+    }
+</style>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyBI99puIzUYT3b0-A8lirjyZypUTd5eI&signed_in=true"></script>
 <script>
@@ -98,13 +112,12 @@
     google.maps.event.addDomListener(window, 'load', initialise); // Execute our 'initialise' function once the page has loaded.
 </script>
 
-<section>
-    <header>
-        <h2>Carte des services disponibles :</h2>
-    </header>
-    <div id="map-canvas"></div>
+<section id="intro" class="wrapper style1 texte">
+    <div class="inner">
+        <header>
+            <h2>Carte des services disponibles :</h2>
+        </header>
+        <div id="map-canvas"></div>
 </section>
 
-
-
-<?php include "footer.php";?>
+<?php include 'footer.php';?>
