@@ -1,4 +1,7 @@
-<?php include 'header.php';?>
+<?php
+  $title="Concept";
+  include 'header.php';
+?>
 
 <!-- Intro -->
 <section id="intro" class="wrapper style1 texte">

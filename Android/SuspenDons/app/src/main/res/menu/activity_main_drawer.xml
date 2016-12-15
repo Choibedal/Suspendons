@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/house"
+            android:title="Accueil" />
+        <item
+            android:id="@+id/nav_services"
+            android:icon="@drawable/clipboard"
+            android:title="Liste des services" />
+        <item
+            android:id="@+id/nav_carte"
+            android:icon="@drawable/map"
+            android:title="Carte" />
+        <item
+            android:id="@+id/nav_don"
+            android:icon="@drawable/wallet"
+            android:title="Don" />
+        <item
+            android:id="@+id/nav_pub"
+            android:icon="@drawable/gift"
+            android:title="Financer gratuitement" />
+    </group>
+
+</menu>

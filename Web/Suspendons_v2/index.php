@@ -1,13 +1,18 @@
-<?php include 'header.php';?>
+<?php
+  $title="Accueil";
+  include 'header.php';
+?>
 
 <!-- Intro -->
 <section id="intro" class="wrapper style1 featured">
 	<div class="inner">
-		<span class="image"><img src="images/Suspendons.png" alt="Logo Suspen'Dons"/></span>
+		<span class="image"><img src="images/SD Logo.png" alt="Logo Suspen'Dons"/></span>
 		<div class="content">
 			<header>
-				<h1>Suspen'Dons</h1>
-				<p>Chaque jour, des milliers de sans-abri français n'ont pas de quoi manger,<br /> ni de quoi s'habiller, ni de quoi se laver.<br /> Soutenez-nous. Aidez-les.</p>
+				<!--<h1>Suspen'Dons</h1>-->
+				<p>Chaque jour, des milliers de sans-abri français n'ont pas de quoi manger,
+					</br>ni de quoi s'habiller, ni de quoi se laver.
+					<br/><br/>Soutenez-nous. Aidez-les.</p>
 			</header>
 			<footer>
 				<ul class="actions">
@@ -75,4 +80,4 @@
 
 <!-- Two -->
 
-<?php include 'footer.php';?> ;?>
+<?php include 'footer.php';?>

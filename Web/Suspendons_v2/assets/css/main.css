@@ -1916,7 +1916,6 @@ input[type="checkbox"]:checked+label:before, input[type="radio"]:checked+label:b
 }
 
 .image img {
-    border-radius: 0.5rem;
     display: block;
 }
 
@@ -2654,8 +2653,8 @@ table.alt tbody tr td {
 }
 
 .wrapper.featured>.inner>.image img {
-    border-radius: 100%;
     width: 100%;
+    margin-left: 1em;
 }
 
 .wrapper.featured>.inner>.content h1 {
@@ -3287,4 +3286,28 @@ body.is-loading #intro .content {
         -ms-transform: translateY(0.35em);
         transform: translateY(0.35em);
     }
+}
+
+
+/********************* Custom CSS ****************************/
+
+#map-canvas {
+    min-width: 200px;
+    width: 100%;
+    min-height: 200px;
+    height: 100% !important;
+    position: absolute;
+}
+
+.active {
+    background-color: #ffffff33;
+}
+
+.links a:hover {
+    font-weight: bold;
+}
+
+.poi_menu {
+    background-color: white;
+    width: 20%!important;
 }

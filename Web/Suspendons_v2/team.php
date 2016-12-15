@@ -1,4 +1,7 @@
-<?php include 'header.php';?>
+<?php
+  $title="L'équipe";
+  include 'header.php';
+?>
 
 <!-- Intro -->
 <section id="intro" class="wrapper style1 texte">
