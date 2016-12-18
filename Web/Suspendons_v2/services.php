@@ -1,5 +1,5 @@
 <?php
-  $title="Carte des services";
+  $title="Liste des services";
   include 'header.php';
 ?>
 
