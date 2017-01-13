@@ -47,7 +47,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="2">Ces prix sont indicatifs, il vous est possible de : <a href="don.php?don=none">choisir le montant de votre don.</a></td>
+                        <td colspan="2">Ces prix sont indicatifs, il vous est possible de : <a href="don.php">choisir le montant de votre don.</a></td>
                         <td></td>
                     </tr>
                 </tfoot>
@@ -58,21 +58,21 @@
             </p>
 
             <ul class="icons major style2">
-                <li>
-                    <a class="icon fa-tint packs" href="don.php?don=tint" title="Pack Hygiène"></a>
-                </li>
-                <li>
-                    <a class="icon fa-cutlery packs" href="don.php?don=tint" title="Pack Hygiène"></a>
-                </li>
-                <li>
-                    <a class="icon fa-scissors packs" href="don.php?don=tint" title="Pack Hygiène"></a>
-                </li>
-                <li>
-                    <a class="icon fa-gift packs" href="don.php?don=tint" title="Pack Hygiène"></a>
-                </li>
-                <li>
-                    <a class="icon fa-briefcase packs" href="don.php?don=tint" title="Pack Hygiène"></a>
-                </li>
+              <li>
+        				<a class="icon fa-tint packs" href="don.php?don=tint" title="Une douche"></a>
+        			</li>
+        			<li>
+        				<a class="icon fa-cutlery packs" href="don.php?don=meal" title="Un Repas"></a>
+        			</li>
+        			<li>
+        				<a class="icon fa-scissors packs" href="don.php?don=scissors" title="Coupe de cheveux / barbe"></a>
+        			</li>
+        			<li>
+        				<a class="icon fa-gift packs" href="don.php?don=gift" title="Pack bien-être"></a>
+        			</li>
+        			<li>
+        				<a class="icon fa-briefcase packs" href="don.php?don=briefcase" title="Pack Embauche"></a>
+        			</li>
             </ul>
 
             <ul class="actions" style="text-align:center;">

@@ -54,19 +54,19 @@
 		</header>
 		<ul class="icons major style2">
 			<li>
-				<a class="icon fa-tint packs" href="don.php?don=tint" title="Pack Hygiène"></a>
+				<a class="icon fa-tint packs" href="don.php?don=tint" title="Une douche"></a>
 			</li>
 			<li>
-				<a class="icon fa-cutlery packs" href="don.php?don=tint" title="Pack Hygiène"></a>
+				<a class="icon fa-cutlery packs" href="don.php?don=meal" title="Un Repas"></a>
 			</li>
 			<li>
-				<a class="icon fa-scissors packs" href="don.php?don=tint" title="Pack Hygiène"></a>
+				<a class="icon fa-scissors packs" href="don.php?don=scissors" title="Coupe de cheveux / barbe"></a>
 			</li>
 			<li>
-				<a class="icon fa-gift packs" href="don.php?don=tint" title="Pack Hygiène"></a>
+				<a class="icon fa-gift packs" href="don.php?don=gift" title="Pack bien-être"></a>
 			</li>
 			<li>
-				<a class="icon fa-briefcase packs" href="don.php?don=tint" title="Pack Hygiène"></a>
+				<a class="icon fa-briefcase packs" href="don.php?don=briefcase" title="Pack Embauche"></a>
 			</li>
 		</ul>
 		<p>Si vous, ou une personne que vous apercevez dans la rue, a besoin, d'aide, n'hésitez pas à cliquer sur le lien suivant et lui indiquer les services disponibles aux alentours.</p>
