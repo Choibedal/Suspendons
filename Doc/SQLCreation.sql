@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  16/12/2016 16:15:40                      */
+/* Date de création :  13/01/2017 13:15:19                      */
 /*==============================================================*/
 
 
@@ -53,7 +53,7 @@ create table CAGNOTTE
 create table REGION
 (
    ID                   numeric not null,
-   NOM                  numeric not null,
+   NOM                  text not null,
    primary key (ID)
 );
 
@@ -90,7 +90,7 @@ create table TRANSACTION_SORTANTE
 create table TYPECAGNOTTE
 (
    ID                   numeric not null,
-   NOM                  numeric not null,
+   NOM                  text not null,
    primary key (ID)
 );
 
@@ -100,7 +100,7 @@ create table TYPECAGNOTTE
 create table TYPEUSER
 (
    ID                   numeric not null,
-   NOM                  numeric not null,
+   NOM                  text not null,
    primary key (ID)
 );
 
@@ -110,6 +110,7 @@ create table TYPEUSER
 create table UTILISATEUR
 (
    ID                   numeric not null,
+   PSEUDO               text,
    MAIL                 text,
    MDP                  text,
    ADRESSE              text,

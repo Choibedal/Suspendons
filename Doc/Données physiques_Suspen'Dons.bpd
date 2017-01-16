@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{AE4E209B-83F4-4B9F-A7C4-2F925C849920}" Label="" LastModificationDate="1484553932" Name="Données physiques_Suspen&#39;Dons" Objects="79" Symbols="17" Target="MySQL 5.0" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{AE4E209B-83F4-4B9F-A7C4-2F925C849920}" Label="" LastModificationDate="1484323994" Name="Données physiques_Suspen&#39;Dons" Objects="79" Symbols="17" Target="MySQL 5.0" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" signature="PDM_DATA_MODEL_XML" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -12,14 +12,14 @@
 <a:Code>DONNEES_PHYSIQUES_SUSPEN_DONS</a:Code>
 <a:CreationDate>1476888540</a:CreationDate>
 <a:Creator>Ckankonmange</a:Creator>
-<a:ModificationDate>1484553932</a:ModificationDate>
+<a:ModificationDate>1484323994</a:ModificationDate>
 <a:Modifier>Ckankonmange</a:Modifier>
 <a:PackageOptionsText>[FolderOptions]
 
 [FolderOptions\Physical Objects]
 GenerationCheckModel=Yes
 GenerationPath=
-GenerationOptions=Database Generation=085D8A62-7299-4EF4-8C6E-D26D0FEDDFE2
+GenerationOptions=
 GenerationTasks=
 GenerationTargets=
 GenerationSelections=
@@ -104,7 +104,7 @@ GenScriptNamLabl=No
 GenScriptQDtbs=No
 GenScriptQOwnr=Yes
 GenScriptCase=0
-GenScriptEncoding=ANSI
+GenScriptEncoding=UTF8
 GenScriptNAcct=No
 IdentifierDelimiter=&quot;
 
@@ -140,7 +140,7 @@ Create=Yes
 Grant=Yes
 Drop=Yes
 Comment=Yes
-Privilege=Yes
+Privilege=No
 
 [FolderOptions\Physical Objects\Database Generation\User\Create]
 Physical Options=No
@@ -149,7 +149,7 @@ Physical Options=No
 Create=Yes
 Drop=Yes
 Comment=Yes
-Privilege=Yes
+Privilege=No
 
 [FolderOptions\Physical Objects\Database Generation\Role]
 Create=Yes
@@ -197,7 +197,7 @@ Permission=No
 Create=Yes
 Drop=Yes
 Comment=Yes
-Permission=Yes
+Permission=No
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Table\Create]
 Check=Yes
@@ -226,7 +226,7 @@ Drop=Yes
 Comment=Yes
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Key\Primary key\Create]
-Constraint declaration=Yes
+Constraint declaration=No
 Physical Options=Yes
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Key\Alternate key]
@@ -235,7 +235,7 @@ Drop=Yes
 Comment=Yes
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Key\Alternate key\Create]
-Constraint declaration=Yes
+Constraint declaration=No
 Physical Options=Yes
 
 [FolderOptions\Physical Objects\Database Generation\Table&amp;&amp;Column\Foreign key]
@@ -277,7 +277,7 @@ For other=Yes
 Create=Yes
 Drop=Yes
 Comment=Yes
-Permission=Yes
+Permission=No
 
 [FolderOptions\Physical Objects\Database Generation\View\Create]
 Force Column list=No
@@ -301,9 +301,9 @@ Cluster=Yes
 Other=Yes
 
 [FolderOptions\Physical Objects\Database Generation\View\Trigger]
-Create=No
-Drop=No
-Comment=No
+Create=Yes
+Drop=Yes
+Comment=Yes
 
 [FolderOptions\Physical Objects\Database Generation\View\Trigger\Filter]
 For insert=Yes
@@ -342,7 +342,7 @@ Footer=Yes
 Create=Yes
 Drop=Yes
 Comment=Yes
-Permission=Yes
+Permission=No
 
 [FolderOptions\Physical Objects\Database Generation\Procedure\Create]
 Header=Yes
