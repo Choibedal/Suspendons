@@ -1,3 +1,5 @@
+<?php include('query.php') ?>
+
 <!DOCTYPE HTML>
 <!--
     Reflex by Pixelarity
@@ -47,13 +49,8 @@
     <!-- Wrapper -->
     <div id="wrapper">
         <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "suspendons";
-
             // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
+            $conn = getConnection();
             // Check connection
             if ($conn->connect_error) 
             {
@@ -61,13 +58,13 @@
             } 
 
             $sql = "SELECT * FROM utilisateur WHERE utilisateur.idType = (SELECT id FROM typeuser WHERE typeuser.Nom = 'Partenaire')";
-            $partners = array();
             //Si tu vire cette ligne ça marche plus, have fun (en gros mysql n'est pas en utf8 et avec ça ça marche)
-            $conn->query("SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
             $result = $conn->query($sql);
+
+
+            $partners = array();
             if ($result->num_rows > 0) 
             {
-
                 // output data of each row
                 while($row = $result->fetch_assoc()) 
                 {
