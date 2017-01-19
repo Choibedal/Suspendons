@@ -11,13 +11,14 @@
 
 	function getConnection()
 	{
-	    $servername 	= 	"clementvachet.fr";
+	    $servername 	= 	"clementvclsuspen.mysql.db";
 	    $username 		= 	"clementvclsuspen";
 	    $password 		= 	"Suspencma1";
 	    $dbname 			= 	"clementvclsuspen";
 
 	    // Create connection
 	    $conn = new mysqli($servername, $username, $password, $dbname);
+
 	    // Check connection
 	    if ($conn->connect_error)
 	    {

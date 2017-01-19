@@ -73,7 +73,7 @@
         </header>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations">
-            <input type="hidden" name="business" value="clement.vachet@viacesi.fr">
+            <input type="hidden" name="business" value="suspendons@suspendons.fr">
             <input type="hidden" name="lc" value="FR">
             <input type="hidden" name="item_name" value="Suspen' Dons">
             <input type="hidden" name="no_note" value="0">

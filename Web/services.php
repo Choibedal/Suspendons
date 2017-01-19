@@ -45,13 +45,9 @@
                         <td>25€</td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="2">Ces prix sont indicatifs, il vous est possible de : <a href="don">choisir le montant de votre don.</a></td>
-                        <td></td>
-                    </tr>
-                </tfoot>
             </table>
+
+            <p>Ces prix sont indicatifs, il vous est possible de : <a href="don">choisir le montant de votre don.</p>
 
             <p>
                 Vous pouvez offrir un sandwich, une séance chez le coiffeur, un hébergement d'une nuit, etc ...

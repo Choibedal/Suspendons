@@ -9,7 +9,7 @@
 		<div class="content center">
 			<header>
 				<!--<h1>Suspen'Dons</h1>-->
-        <img src="images/SD Logo.png" alt="Logo Suspen'Dons"/>
+        <img class="logo" src="assets/images/SD Logo.png" alt="Logo Suspen'Dons"/>
         <br />
 				<p>Chaque jour, des milliers de sans-abri français n'ont pas de quoi manger,
 					</br>ni de quoi s'habiller, ni de quoi se laver.

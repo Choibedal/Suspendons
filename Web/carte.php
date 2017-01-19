@@ -1,7 +1,50 @@
-<?php
-  $title="Carte";
-  include 'header.php';
-?>
+<?php include('query.php') ?>
+
+<!DOCTYPE HTML>
+<!--
+    Reflex by Pixelarity
+    pixelarity.com | hello@pixelarity.com
+    License: pixelarity.com/license
+-->
+<html>
+
+<head>
+    <title>Suspen'Dons | Carte des services</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/SD favicon.png">
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+        <ul class="links">
+            <li><a  href="index.php">Accueil</a></li>
+            <li><a  href="concept.php">Concept</a></li>
+            <li><a  href="team.php">L'équipe</a></li>
+            <li><a  href="services.php">Liste des services</a></li>
+            <li><a class="active" href="carte.php">Carte des services</a></li>
+            <!--<li><a href="temoins.php">Témoignages</a></li>-->
+        </ul>
+        <ul class="actions vertical">
+            <li><a  href="don.php" class="button fit special">Je fais un don</a></li>
+        </ul>
+    </nav>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -14,7 +57,7 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            $sql = "SELECT * FROM utilisateur WHERE utilisateur.idType = (SELECT id FROM typeuser WHERE typeuser.Nom = 'Partenaire')";
+            $sql = "SELECT * FROM UTILISATEUR WHERE UTILISATEUR.IDTYPE = (SELECT id FROM TYPEUSER WHERE TYPEUSER.NOM = 'Partenaire')";
             //Si tu vire cette ligne ça marche plus, have fun (en gros mysql n'est pas en utf8 et avec ça ça marche)
             $result = $conn->query($sql);
 
@@ -169,4 +212,13 @@
         </div>
     </div>
 
-<?php include 'footer.php';?>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

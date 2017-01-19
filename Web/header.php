@@ -38,15 +38,15 @@
 	<nav id="menu">
 		<h2>Menu</h2>
 		<ul class="links">
-			<li><a <?php if ($filename == "index") {echo "class=\"active\"";};?> href="index.php">Accueil</a></li>
-			<li><a <?php if ($filename == "concept") {echo "class=\"active\"";};?> href="concept.php">Concept</a></li>
-			<li><a <?php if ($filename == "team") {echo "class=\"active\"";};?> href="team.php">L'équipe</a></li>
-			<li><a <?php if ($filename == "services") {echo "class=\"active\"";};?> href="services.php">Liste des services</a></li>
-			<li><a <?php if ($filename == "carte") {echo "class=\"active\"";};?> href="carte.php">Carte des services</a></li>
+			<li><a <?php if ($filename == "index") {echo "class=\"active\"";};?> href="index">Accueil</a></li>
+			<li><a <?php if ($filename == "concept") {echo "class=\"active\"";};?> href="concept">Concept</a></li>
+			<li><a <?php if ($filename == "team") {echo "class=\"active\"";};?> href="team">L'équipe</a></li>
+			<li><a <?php if ($filename == "services") {echo "class=\"active\"";};?> href="services">Liste des services</a></li>
+			<li><a <?php if ($filename == "carte") {echo "class=\"active\"";};?> href="carte">Carte des services</a></li>
 			<!--<li><a href="temoins.php">Témoignages</a></li>-->
 		</ul>
 		<ul class="actions vertical">
-			<li><a <?php if ($filename == "don") {echo "class=\"active\"";};?> href="don.php" class="button fit special">Je fais un don</a></li>
+			<li><a <?php if ($filename == "don") {echo "class=\"active\"";};?> href="don" class="button fit special">Je fais un don</a></li>
 		</ul>
 	</nav>
 

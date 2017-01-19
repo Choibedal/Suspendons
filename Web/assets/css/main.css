@@ -2107,8 +2107,8 @@ ul.icons.style2 li:first-child:before {
 }
 
 ul.icons.style2.major li:before {
-    width: 6em;
-    left: -6em;
+    width: 4em;
+    left: -4em;
 }
 
 @media screen and (max-width: 1280px) {
@@ -2297,6 +2297,11 @@ section header p, article header p {
 section li, article li {
     padding-left: 1em;
     margin-left: 2em;
+}
+
+section ul.actions li,
+section ul.icons li {
+    margin-left: inherit;
 }
 
 section header.major, article header.major {
@@ -3357,4 +3362,16 @@ body.is-loading #intro .content {
 .poi_menu {
     background-color: white;
     width: 20%!important;
+}
+
+.logo {
+    width: 50% !important;
+}
+
+    @media screen and (max-width: 736px) {
+    section#intro table.default {
+         margin-right: -2em !important;
+    margin-left: -2em !important;
+    width: calc(100% + 4em);
+    }
 }
