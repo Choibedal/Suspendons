@@ -3344,11 +3344,10 @@ body.is-loading #intro .content {
 /********************* Custom CSS ****************************/
 
 #map-canvas {
-    min-width: 200px;
-    width: 100%;
-    min-height: 200px;
-    height: 100% !important;
+    width: 75%;
+    height: 100%;
     position: absolute;
+    display: inline-block;
 }
 
 .active {
@@ -3360,8 +3359,15 @@ body.is-loading #intro .content {
 }
 
 .poi_menu {
-    background-color: white;
-    width: 20%!important;
+    width: 25%;
+    display: inline-block;
+    padding: 1.5em;
+}
+
+.poi_menu li{
+  list-style: square;
+  padding: 0.5em;
+  list-style-position: inside;
 }
 
 .logo {
@@ -3374,4 +3380,9 @@ body.is-loading #intro .content {
     margin-left: -2em !important;
     width: calc(100% + 4em);
     }
+}
+
+h4 .title-carte{
+  font-weight: bold;
+  text-decoration: underline;
 }
