@@ -41,7 +41,7 @@
 			<li><a <?php if ($filename == "index") {echo "class=\"active\"";};?> href="index">Accueil</a></li>
 			<li><a <?php if ($filename == "concept") {echo "class=\"active\"";};?> href="concept">Concept</a></li>
 			<li><a <?php if ($filename == "services") {echo "class=\"active\"";};?> href="services">Liste des services</a></li>
-			<li><a <?php if ($filename == "carte") {echo "class=\"active\"";};?> href="carte">Carte des services</a></li>
+			<!--<li><a <?php if ($filename == "carte") {echo "class=\"active\"";};?> href="carte">Carte des services</a></li>-->
 			<!--<li><a href="temoins.php">Témoignages</a></li>-->
 		</ul>
 		<ul class="actions vertical">

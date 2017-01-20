@@ -36,8 +36,8 @@
         <header>
             <h2>Je choisis la valeur de mon don</h2>
         </header>
-
-        <form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+    <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
+        <form method="post" action="">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="clement.vachet@viacesi.fr">
             <input type="hidden" name="lc" value="FR">
@@ -71,7 +71,8 @@
         <header>
             <h2>Régler via Paypal</h2>
         </header>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+        <form action="" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="suspendons@suspendons.fr">
             <input type="hidden" name="lc" value="FR">
