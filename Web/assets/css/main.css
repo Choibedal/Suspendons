@@ -2299,8 +2299,7 @@ section li, article li {
     margin-left: 2em;
 }
 
-section ul.actions li,
-section ul.icons li {
+section ul.actions li, section ul.icons li {
     margin-left: inherit;
 }
 
@@ -2944,7 +2943,7 @@ table.alt tbody tr td {
 @media screen and (max-width: 736px) {
     #header {
         right: 1em;
-        top: 1em;
+        op: 1em;
     }
     #header ul li a {
         height: 3em;
@@ -3364,25 +3363,94 @@ body.is-loading #intro .content {
     padding: 1.5em;
 }
 
-.poi_menu li{
-  list-style: square;
-  padding: 0.5em;
-  list-style-position: inside;
+.poi_menu li {
+    list-style: square;
+    padding: 0.5em;
+    list-style-position: inside;
 }
 
 .logo {
     width: 50% !important;
 }
 
-    @media screen and (max-width: 736px) {
+@media screen and (max-width: 736px) {
     section#intro table.default {
-         margin-right: -2em !important;
-    margin-left: -2em !important;
-    width: calc(100% + 4em);
+        margin-right: -2em !important;
+        margin-left: -2em !important;
+        width: calc(100% + 4em);
     }
 }
 
-h4 .title-carte{
-  font-weight: bold;
-  text-decoration: underline;
+h4 .title-carte {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/******************************** FAQ Section *********************/
+
+#questions-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#questions-lists li {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+#questions-lists a {
+    border: none;
+}
+
+#questions-lists a:hover {
+    border-bottom: solid 1px;
+}
+
+
+/***************************** Footer **************************/
+
+section.footer {
+    background-color: #a3a3a3;
+    padding: 1em 0 1em 0;
+    color: white;
+}
+
+section.footer li, section.footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+section.footer ul li {
+    display: inline-block;
+}
+
+section.footer ul li a {
+    border: none;
+    padding-right: 1.5em;
+}
+
+section.footer p {
+    margin: 0 0 1em 0;
+}
+
+img.brightness {
+    -webkit-transition: brightness 2s;
+    transition: brightness 2s;
+}
+
+img.brightness:hover {
+    -webkit-filter: brightness(0.25);
+    filter: brightness(0.25);
+}
+
+.social_icons img {
+    width: 2em;
+    height: 2em;
+}
+
+.footer-copyright, .legal-mentions {
+    font-size: 80%;
 }

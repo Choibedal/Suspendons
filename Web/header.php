@@ -16,7 +16,7 @@
 	<title>Suspen'Dons | <?php echo $title ?></title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="shortcut icon" type="image/x-icon" href="images/SD favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -42,7 +42,7 @@
 			<li><a <?php if ($filename == "concept") {echo "class=\"active\"";};?> href="concept">Concept</a></li>
 			<li><a <?php if ($filename == "services") {echo "class=\"active\"";};?> href="services">Liste des services</a></li>
 			<!--<li><a <?php if ($filename == "carte") {echo "class=\"active\"";};?> href="carte">Carte des services</a></li>-->
-			<!--<li><a href="temoins.php">Témoignages</a></li>-->
+			<!--<li><a <?php if ($filename == "questions") {echo "class=\"active\"";};?> href="questions">FAQ</a></li>-->
 		</ul>
 		<ul class="actions vertical">
 			<li><a <?php if ($filename == "don") {echo "class=\"active\"";};?> href="don" class="button fit special">Je fais un don</a></li>
