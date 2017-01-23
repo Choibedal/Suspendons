@@ -1,8 +1,8 @@
 <?php
 	 
-	$action = $_GET["action"];
-	$name = $_GET["name"];
-	$password = $_GET["password"];
+	$action = $_POST["action"];
+	$name = $_POST["name"];
+	$password = $_POST["password"];
 
 	if ($action == "login") 
 	{
@@ -30,7 +30,7 @@
 	    $servername 	= 	"clementvclsuspen.mysql.db";
 	    $username 		= 	"clementvclsuspen";
 	    $password 		= 	"Suspencma1";
-	    $dbname 			= 	"clementvclsuspen";
+	    $dbname 		= 	"clementvclsuspen";
 	    //Debug
 	    /*$servername 	= 	"localhost";
 	    $username 		= 	"root";
