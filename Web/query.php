@@ -1,8 +1,8 @@
 <?php
 	 
-	$action = $_POST["action"];
-	$name = $_POST["name"];
-	$password = $_POST["password"];
+	$action = $_GET["action"];
+	$name = $_GET["name"];
+	$password = $_GET["password"];
 
 	if ($action == "login") 
 	{
@@ -26,16 +26,16 @@
 
 	function getConnection()
 	{
-		/*Prod
+		//Prod
 	    $servername 	= 	"clementvclsuspen.mysql.db";
 	    $username 		= 	"clementvclsuspen";
 	    $password 		= 	"Suspencma1";
 	    $dbname 			= 	"clementvclsuspen";
-	    Debug*/
-	    $servername 	= 	"localhost";
+	    //Debug
+	    /*$servername 	= 	"localhost";
 	    $username 		= 	"root";
 	    $password 		= 	"";
-	    $dbname 			= 	"suspendons";
+	    $dbname 			= 	"suspendons";*/
 
 	    // Create connection
 	    $conn = new mysqli($servername, $username, $password, $dbname);
@@ -64,7 +64,7 @@
 	      	while($row = $result->fetch_assoc())
 	      	{
 	          	array_push($login, [
-	              	'email' => $row["MAIL"];
+	              	'email' => $row["MAIL"]
 	          	]);
 	      	}
 	  	}
@@ -99,6 +99,6 @@
 
 	function returnToAndroid($result)
 	{
-		echo json_encode(array("user_data"=>$response));
+		echo json_encode(array("user_data"=>$result));
 	}
 ?>
