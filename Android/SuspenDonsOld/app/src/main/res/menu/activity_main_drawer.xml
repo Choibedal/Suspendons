@@ -8,19 +8,19 @@
             android:title="Accueil" />
         <item
             android:id="@+id/nav_services"
-            android:icon="@drawable/clipboard"
+            android:icon="@drawable/list"
             android:title="Liste des services" />
         <item
             android:id="@+id/nav_carte"
-            android:icon="@drawable/map"
+            android:icon="@drawable/placeholder"
             android:title="Carte" />
         <item
             android:id="@+id/nav_don"
-            android:icon="@drawable/wallet"
+            android:icon="@drawable/sd_logo"
             android:title="Don" />
         <item
             android:id="@+id/nav_pub"
-            android:icon="@drawable/gift"
+            android:icon="@drawable/euro"
             android:title="Financer gratuitement" />
     </group>
 

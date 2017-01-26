@@ -1,12 +1,16 @@
 <?php
 	 
 	$action = $_POST["action"];
-	$name = $_POST["name"];
+	$email = $_POST["email"];
 	$password = $_POST["password"];
 
 	if ($action == "login") 
 	{
-		returnToAndroid(getLogin($name, $password));
+		returnToAndroid(getLogin($email, $password));
+	}
+	else if ($action == "profile") 
+	{
+		returnToAndroid(getProfilInformations($email, $password));
 	}
 	else
 	{
@@ -52,9 +56,9 @@
         return $conn;
 	}
 
-	function getLogin($pseudo, $mdp)
+	function getLogin($email, $mdp)
 	{
-		$sql = 'SELECT MAIL FROM UTILISATEUR WHERE MAIL="'. $pseudo .'" AND MDP="'. $mdp . '" AND IDTYPE=0';
+		$sql = 'SELECT MAIL FROM UTILISATEUR WHERE MAIL="'. $email .'" AND MDP="'. $mdp . '" AND IDTYPE=0';
         $result = getConnection()->query($sql);
 
         $login = array();
@@ -73,32 +77,34 @@
 
 
 
-	function getProfilInformations($pseudo, $mdp)
+	function getProfilInformations($email, $mdp)
 	{
-		$sql = 'SELECT PSEUDO FROM UTILISATEUR WHERE PSEUDO="'. $pseudo .'" AND MDP="'. $mdp . '" AND IDTYPE=0';
+		$sql = 'SELECT * FROM UTILISATEUR WHERE MAIL="'. $email .'" AND MDP="'. $mdp .'"';
         $result = getConnection()->query($sql);
+
+        $profile = array();
         if ($result->num_rows > 0)
 		{
 	      	// output data of each row
 	      	while($row = $result->fetch_assoc())
 	      	{
-	          	array_push($partners, [
+	          	array_push($profile, [
 	              	'name' => $row["PSEUDO"],
-	              	'mail' => $row["MAIL"],
-	              	'address' => implode(' ', [$row["ADRESSE"], $row["CP"], $row["VILLE"]])
+	              	'email' => $row["MAIL"],
+	              	'address' => implode(' ', [$row["ADRESSE"], $row["CP"], $row["VILLE"]]),
+	              	'dateCreation' => $row["DATECREATION"],
+	              	'region' => $row["IDREGION"]
 	          	]);
 	      	}
 	  	}
 
-        $conn->close();
-
-        return $result;
+        return $profile;
 	}
 
 
 
 	function returnToAndroid($result)
 	{
-		echo json_encode(array("user_data"=>$result));
+		echo json_encode($result, JSON_FORCE_OBJECT);
 	}
 ?>
