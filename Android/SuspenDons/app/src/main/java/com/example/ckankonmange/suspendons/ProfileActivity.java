@@ -21,8 +21,8 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         SharedPreferences prefs = getSharedPreferences(MainActivity.prefsFile, MODE_PRIVATE);
-        String mEmail = prefs.getString("email", null);//"No name defined" is the default value.
-        String mPassword = prefs.getString("password", null); //0 is the default value.
+        String mEmail = prefs.getString("email", null);
+        String mPassword = prefs.getString("password", null);
         if (mEmail == null && mPassword == null)
         {
             return;
