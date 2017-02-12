@@ -24,7 +24,7 @@ include "header.php";
                 <blockquote class="testimonial">
                     <p>Bénévole en bibliothèque, est responsable de l’infrastructure et du contact avec les professionnels de santé et les structures d’hébergement et d’aide des sans-abris. </p>
                     <cite>
-              <span class="image style2"><img src="images/avatar.png" alt="" /></span>
+              <span class="image style2"><img src="images/axel.jpg" alt="" /></span>
               <span class="name">Axel GAUVRIT</span>
               <span class="title">Resonsable communication</span>
             </cite>
@@ -34,7 +34,7 @@ include "header.php";
                 <blockquote class="testimonial">
                     <p>Entrepreneur indépendant, chef de projet, responsable de l’ensemble des documents, de la recherche des collaborateurs et du bon déroulement du projet.</p>
                     <cite>
-              <span class="image style2"><img src="images/avatar.png" alt="" /></span>
+              <span class="image style2"><img src="images/maxime.jpg" alt="" /></span>
               <span class="name">Maxime RIFFLART</span>
               <span class="title">Chef de projet</span>
             </cite>
@@ -44,7 +44,7 @@ include "header.php";
                 <blockquote class="testimonial">
                     <p>Développeur free-lance, web/design, responsable de la plateforme web, de l’interface utilisateur et de l’ergonomie des plateformes digitales web/mobile.</p>
                     <cite>
-              <span class="image style2"><img src="images/avatar.png" alt="" /></span>
+              <span class="image style2"><img src="images/clement.jpg" alt="" /></span>
               <span class="name">Clément VACHET</span>
               <span class="title">Développeur WEB</span>
             </cite>

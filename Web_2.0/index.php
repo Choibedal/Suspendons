@@ -18,7 +18,7 @@ include "header.php";
                         <br/><br/>Soutenez-nous. Aidez-les.</p>
                 </header>
                 <ul class="actions">
-                    <li><a href="don.html" class="button icon icon-after">Je fais un don</a></li>
+                    <li><a href="don" class="button icon icon-after">Je fais un don</a></li>
                 </ul>
             </div>
         </div>

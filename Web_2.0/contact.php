@@ -1,4 +1,8 @@
-*
+<?php
+  $title="Contact";
+  include 'header.php';
+?>
+
 <!-- Main-->
 <div id="main" class="wrapper style3">
 	<div class="container 75%">

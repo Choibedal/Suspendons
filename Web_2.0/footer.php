@@ -1,10 +1,10 @@
 <!-- Footer -->
 <footer id="footer">
     <ul class="major-icons">
-        <li><a href="https://www.facebook.com/SuspenDons/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="contact.php" class="icon fa-envelope"><span class="label">Email</span></a></li>
+        <li><a href="https://www.facebook.com/SuspenDons/" class="icon fa-facebook" target="_blank" title="Suivez-nous sur notre page Facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="contact.php" class="icon fa-envelope" target="_blank" title="Contactez-nous via notre formulaire"><span class="label">Email</span></a></li>
     </ul>
-    <p class="copyright">&copy; Untitled. All rights reserved.</p>
+    <p class="copyright">&copy; Suspen' Dons. All rights reserved.</p>
 </footer>
 
 </div>

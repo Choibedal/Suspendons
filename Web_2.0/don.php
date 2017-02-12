@@ -2,6 +2,8 @@
 $title = "Don";
 include "header.php";
 
+$url = parse_url($_SERVER['REQUEST_URI']);
+
 if (isset($url['query'])){
 
   switch($_GET['don'])
@@ -33,6 +35,9 @@ else {
     <div id="tone" class="container">
         <header>
             <h2>Je choisis la valeur de mon don</h2>
+            <p>
+              Important : Cette page est désactivée pour l'instant, elle reste en travaux.
+            </p>
         </header>
         <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
         <form method="post" action="">
@@ -47,7 +52,7 @@ else {
                 <div class="6u 12u$(xsmall)">
                     <label><input type="number" name="amount" id="don" value="<?php echo $valeur;?>" /> €</label></div>
                 <div class="6u$ 12u$(xsmall)">
-                    <input type="submit" value="Envoyer mon don" class="special" />
+                    <input type="submit" value="Envoyer mon don" class="special disabled" />
                 </div>
             </div>
         </form>
@@ -58,7 +63,7 @@ else {
 
         <footer>
             <ul class="actions">
-                <li><a href="services" class="button">Carte des services</a></li>
+                <li><a href="concept#services" class="button">Carte des services</a></li>
             </ul>
         </footer>
     </div>

@@ -72,7 +72,7 @@ include "header.php";
 </section>
 
 <!-- Five -->
-<section id="intro" class="wrapper style3">
+<section id="services" class="wrapper style3">
     <div class="container">
         <header>
             <h2>Liste des services et packs disponibles :</h2>
