@@ -111,7 +111,7 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 addMarker(results[0].geometry.location, entry);
             } else {
-                alert('Pute: ' + status);
+                alert('Error: ' + status);
             }
         });
     }
