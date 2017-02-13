@@ -13,7 +13,7 @@ include "header.php";
             <div class="6u 12u$(medium)">
                 <header>
                     <h2>Chaque jour,</h2>
-                    <p>des milliers de sans-abri français n'ont pas de quoi manger, ni de quoi s'habiller, ni de quoi se laver.
+                    <p>des milliers de sans-abris français n'ont pas de quoi manger, ni de quoi s'habiller, ni de quoi se laver.
                         <br/><br/>Soutenez-nous. Aidez-les.</p>
                 </header>
                 <ul class="actions">
