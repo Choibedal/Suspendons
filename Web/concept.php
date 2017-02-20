@@ -1,14 +1,12 @@
 <?php
-  $title="Concept";
-  include 'header.php';
+$title = "Concept";
+include "header.php";
 ?>
 
-<!-- Intro -->
-<section id="intro" class="wrapper style3 special">
-    <div class="inner">
-        <header>
-            <h1>Concept :</h1>
-        </header>
+<!-- One -->
+<section id="Concept" class="wrapper background special">
+    <div class="container">
+        <h2>Contexte :</h2>
         <p>
             Le projet « Suspen’dons » est né de notre volonté de vouloir changer la vie des personnes les plus démunies, et avoir la possibilité de les aider, au quotidien, à croire en eux et à les encourager à se réintégrer dans la société.
         </p>
@@ -20,40 +18,9 @@
     </div>
 </section>
 
-<!-- Team -->
-<section id="intro" class="wrapper style1 texte">
-    <div class="inner">
-        <header>
-            <h1>Qui sommes-nous ?</h1>
-        </header>
-        <p>
-            L’équipe est constituée de 3 étudiants en 5ème à l’école d’ingénieur en informatique <a href="https://exia.cesi.fr" target="_blank" rel="nofollow">eXia.Cesi</a> de Strasbourg. Formés au métier de « Manager de Systèmes d’Informations », nous
-            sommes initiés aux thématiques de l’entreprenariat et de la gestion de projet au cours de scolarité.
-        </p>
-        <img class="image" src="assets/images/groupe.jpg" />
-        <p>
-            Mais au-delà de ça, nous avons tous des profils variés (de gauche à droite) :
-        </p>
-
-        <ul>
-            <li>
-                <b>Axel GAUVRIT</b>, bénévole en bibliothèque, est responsable de l’infrastructure et du contact avec les professionnels de santé et les structures d’hébergement et d’aide des sans-abris.
-                </br>Dans un second temps, il réalisera, en collaboration avec Maxime, l’application Android.
-            </li>
-            <li>
-                <b>Maxime RIFFLART</b>, entrepreneur indépendant et chef de projet, est responsable de l’ensemble des documents relatifs au projet, de la recherche des collaborateurs et du bon déroulement du projet. A terme, il s’occupera principalement
-                de la communication autour du projet.
-            </li>
-            <li>
-                <b>Clément VACHET</b>, développeur free-lance en conception web/design, est responsable de la plateforme web, de l’interface utilisateur et de l’ergonomie des plateformes digitales web/mobile.
-            </li>
-        </ul>
-    </div>
-</section>
-
-<!-- First section -->
-<section id="pauvrete" class="wrapper style2 texte">
-    <div class="inner">
+<!-- Two -->
+<section id="pauvrete" class="wrapper style3">
+    <div class="container">
         <header>
             <h2>La grande pauvreté : un phénomène grandissant</h2>
         </header>
@@ -76,19 +43,19 @@
     </div>
 </section>
 
-<!-- Second Section -->
-<section id="utilisation" class="wrapper style1 special">
-    <div class="inner">
+<!-- Three -->
+<section id="utilisation" class="wrapper style2 special">
+    <div class="container">
         <header>
             <h2>Utilisation dans la vie réelle :</h2>
         </header>
-        <img class="image" src="assets/images/paperboard.png" alt="Paperboard" />
+        <img class="image fit" src="images/paperboard.png" alt="Paperboard" />
     </div>
 </section>
 
-<!-- Third Two -->
-<section id="plateforme" class="wrapper style2 texte">
-    <div class="inner">
+<!-- Four -->
+<section id="plateforme" class="wrapper style4">
+    <div class="container">
         <header>
             <h2>Suspen’Dons : une plateforme pour tous</h2>
         </header>
@@ -101,24 +68,65 @@
         <p>
             La plateforme permet d’offrir, dans sa version initiale, différents produits identifiés comme primaires dans la vie des plus démunis :
         </p>
-        <ul>
-            <li>
-                Un repas
-            </li>
-            <li>
-                Une douche
-            </li>
-            <li>
-                Un service rasage / coiffeur
-            </li>
-            <li>
-                Un service de pressing
-            </li>
-            <li>
-                Location ou achat de vêtements
-            </li>
-        </ul>
     </div>
 </section>
 
-<?php include 'footer.php';?>
+<!-- Five -->
+<section id="services" class="wrapper style3">
+    <div class="container">
+        <header>
+            <h2>Liste des services et packs disponibles :</h2>
+        </header>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align:center">Type</th>
+                    <th style="text-align:center">Description</th>
+                    <th style="text-align:center">Prix</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!--<td><a href="don?don=tint">Une douche</a></td>-->
+                    <td>Une douche</td>
+                    <td>Un accès à l'hygiène de base dans un hotel / une piscine</td>
+                    <td>2€</td>
+                </tr>
+                <tr>
+                    <!--<td><a href="don?don=meal">Plat</a></td>-->
+                    <td>Plat</td>
+                    <td>Un repas chez un de nos restaurateurs partenaires</td>
+                    <td>5€</td>
+                </tr>
+                <tr>
+                    <!--<td><a href="don?don=scissors">Coupe de cheveux / barbe</a></td>-->
+                    <td>Coupe de cheveux / barbe</td>
+                    <td>Reprendre goût à la vie, c'est d'abord reprendre confiance en soir</td>
+                    <td>10€</td>
+                </tr>
+                <tr>
+                    <!--<td><a href="don?don=gift">Pack bien-être</a></td>-->
+                    <td>Pack bien-être</td>
+                    <td>Offrez une journée de confort à un sans-domicile (douche + repas + coiffeur)</td>
+                    <td>17€</td>
+                </tr>
+                <tr>
+                    <!--<td><a href="don?don=briefcase">Pack Embauche</a></td>-->
+                    <td>Pack Embauche</td>
+                    <td>Aidez un sans-domicile à réussir son entretien : douche, repas, coiffeur et pressing.</td>
+                    <td>25€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<p>Ces prix sont indicatifs, il vous est possible de : <a href="don">choisir le montant de votre don.</p></a>-->
+        <p>Ces prix sont indicatifs, il vous est possible de : choisir le montant de votre don.</p>
+
+        <p>
+            Vous pouvez offrir un sandwich, une séance chez le coiffeur, un hébergement d'une nuit, etc ...
+        </p>
+    </div>
+</section>
+
+<?php include "footer.php";?>

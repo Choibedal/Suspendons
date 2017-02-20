@@ -1,108 +1,142 @@
 /*
-	Reflex by Pixelarity
+	Scalar by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Button */
+/* Basic */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		position: relative;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+	hr {
+		border-bottom: solid 2px #ddd;
 	}
 
-/* Icons */
-
-	ul.icons li .icon:before {
-		border: 0;
+	blockquote {
+		border-left: solid 4px #ddd;
 	}
 
-	ul.icons.major li {
-		padding: 0.75em;
+		blockquote.testimonial p {
+			background: #333 !important;
+		}
+
+			blockquote.testimonial p:after {
+				border-top: solid 1em #333 !important;
+			}
+
+	code {
+		background: #eee;
+		border: solid 1px #ddd;
 	}
 
-		ul.icons.major li .icon:before {
-			font-size: 4em;
-			width: 1.5em;
-			height: 1.5em;
-			line-height: 1.5em;
+/* Section/Article */
+
+	header.major:after {
+		background: #ddd;
+	}
+
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		border: solid 1px #ddd;
+	}
+
+	.select-wrapper:before {
+		color: #ddd;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: 2.75em;
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		font-size: 3em;
+	}
+
+		input[type="checkbox"] + label:before,
+		input[type="radio"] + label:before {
+			display: none;
+		}
+
+/* Box */
+
+	.box {
+		border: solid 1px #ddd;
+	}
+
+/* List */
+
+	ul.alt li {
+		border-top: solid 1px #ddd;
+	}
+
+/* Table */
+
+	.table-wrapper {
+		-webkit-overflow-scrolling: touch;
+		overflow-x: auto;
+	}
+
+	table tbody tr {
+		border: solid 1px #ddd;
+		border-left: 0;
+		border-right: 0;
+	}
+
+	table thead {
+		border-bottom: solid 2px #ddd;
+	}
+
+	table tfoot {
+		border-top: solid 2px #ddd;
+	}
+
+	table.alt tbody tr td {
+		border: solid 1px #ddd;
+		border-left-width: 0;
+		border-top-width: 0;
+	}
+
+/* Feature */
+
+	.feature:before {
+		background: #ddd;
+	}
+
+/* Tree */
+
+	.tree {
+		margin: 0;
+		padding: 0;
+	}
+
+		.tree:before, .tree:after {
+			display: none;
 		}
 
 /* Wrapper */
 
-	.wrapper.featured > .inner > .image {
-		position: relative;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
+	.wrapper.split .secondary > section.even:before {
+		background: #ffffff;
 	}
 
-		.wrapper.featured > .inner > .image img {
-			position: relative;
-			-ms-behavior: url("assets/js/ie/PIE.htc");
-		}
-
-/* Header */
-
-	#header ul li a[href="#menu"] {
-		background-color: #565656;
-		-ms-behavior: url("assets/js/ie/PIE.htc");
-		text-indent: 0;
-		color: #ffffff;
-		text-align: center;
-		padding-left: 0 !important;
-		width: 9.6875em;
-		border-radius: 4.6875em;
+	.wrapper.split .secondary > section.odd:before {
+		background: #f5f5f5;
 	}
 
-		#header ul li a[href="#menu"]:before {
-			display: none;
-		}
+/* Banner */
+
+	#banner {
+		-ms-behavior: url("assets/js/ie/backgroundsize.min.htc");
+	}
 
 /* Footer */
 
-	#footer .copyright:before {
-		display: none;
+	#footer .icon:after {
+		background-color: #ddd;
 	}
-
-/* Menu */
-
-	#menu {
-		background-color: #565656;
-		color: #ffffff;
-	}
-
-		#menu:before {
-			display: none;
-		}
-
-		#menu > .close {
-			width: auto;
-			text-indent: 0;
-		}
-
-			#menu > .close:before {
-				display: none;
-			}
-
-		#menu input[type="submit"],
-		#menu input[type="reset"],
-		#menu input[type="button"],
-		#menu button,
-		#menu .button {
-			color: inherit !important;
-			border-color: inherit !important;
-			background-color: transparent !important;
-		}
-
-			#menu input[type="submit"].special,
-			#menu input[type="reset"].special,
-			#menu input[type="button"].special,
-			#menu button.special,
-			#menu .button.special {
-				color: inherit !important;
-				border-color: inherit !important;
-				background-color: transparent !important;
-			}

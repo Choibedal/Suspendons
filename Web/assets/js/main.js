@@ -1,5 +1,5 @@
 /*
-	Reflex by Pixelarity
+	Scalar by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
@@ -11,14 +11,14 @@
 		large: '(max-width: 1280px)',
 		medium: '(max-width: 980px)',
 		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)',
-		xxsmall: '(max-width: 360px)'
+		xsmall: '(max-width: 480px)'
 	});
 
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body');
+			$body = $('body'),
+			$html = $('html');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -26,7 +26,7 @@
 			$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
-				}, 100);
+				}, 0);
 			});
 
 		// Fix: Placeholder polyfill.
@@ -40,106 +40,55 @@
 				);
 			});
 
-		// Menu.
-			var $menu = $('#menu'),
-				$menuInner;
+		// Dropdowns.
+			$('#nav > ul').dropotron({
+				alignment: 'center',
+				hideDelay: 350
+			});
 
-			$menu.wrapInner('<div class="inner"></div>');
-			$menuInner = $menu.children('.inner');
-			$menu._locked = false;
+		// Off-Canvas Navigation.
 
-			$menu._lock = function() {
+			// Navigation Button.
+				$(
+					'<div id="navButton">' +
+						'<a href="#navPanel" class="toggle"></a>' +
+					'</div>'
+				)
+					.appendTo($body);
 
-				if ($menu._locked)
-					return false;
+			// Navigation Panel.
+				$(
+					'<div id="navPanel">' +
+						'<nav>' +
+							$('#nav').navList() +
+						'</nav>' +
+					'</div>'
+				)
+					.appendTo($body)
+					.panel({
+						delay: 500,
+						hideOnClick: true,
+						resetScroll: true,
+						resetForms: true,
+						side: 'top',
+						target: $html,
+						visibleClass: 'navPanel-visible'
+					});
 
-				$menu._locked = true;
+			// Fix: Remove transitions on WP<10 (poor/buggy performance).
+				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
+					$('#header, #navButton, #navPanel, #page-wrapper')
+						.css('transition', 'none');
 
-				window.setTimeout(function() {
-					$menu._locked = false;
-				}, 350);
+		// IE8 fixes.
+			if (skel.vars.IEVersion < 9) {
 
-				return true;
+				// Odd/even on wrapper.split.
+					$('.wrapper.split .secondary > section').each(function(i) {
+						$(this).addClass((i + 1) % 2 == 0 ? 'even' : 'odd');
+					});
 
-			};
-
-			$menu._show = function() {
-
-				if ($menu._lock())
-					$menu.addClass('visible');
-
-			};
-
-			$menu._hide = function() {
-
-				if ($menu._lock())
-					$menu.removeClass('visible');
-
-			};
-
-			$menu._toggle = function() {
-
-				if ($menu._lock())
-					$menu.toggleClass('visible');
-
-			};
-
-			$menuInner
-				.on('click', function(event) {
-					event.stopPropagation();
-				})
-				.on('click', 'a', function(event) {
-
-					var href = $(this).attr('href');
-
-					event.preventDefault();
-					event.stopPropagation();
-
-					// Hide.
-						$menu._hide();
-
-					// Redirect.
-						window.setTimeout(function() {
-							window.location.href = href;
-						}, 250);
-
-				});
-
-			$menu
-				.appendTo($body)
-				.on('click', function(event) {
-
-					event.stopPropagation();
-					event.preventDefault();
-
-					$menu.removeClass('visible');
-
-				})
-				.append('<a class="close" href="#menu">Close</a>');
-
-			$body
-				.on('click', 'a[href="#menu"]', function(event) {
-
-					event.stopPropagation();
-					event.preventDefault();
-
-					// Toggle.
-						$menu._toggle();
-
-				})
-				.on('click', function(event) {
-
-					// Hide.
-						$menu._hide();
-
-				})
-				.on('keydown', function(event) {
-
-					// Hide on escape.
-						if (event.keyCode == 27)
-							$menu._hide();
-
-				});
+			}
 
 	});
 

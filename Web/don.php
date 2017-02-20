@@ -1,42 +1,45 @@
 <?php
-  $title="Don";
-  $url = parse_url($_SERVER['REQUEST_URI']);
-  include 'header.php';
+$title = "Don";
+include "header.php";
 
-  if (isset($url['query'])){
+$url = parse_url($_SERVER['REQUEST_URI']);
 
-    switch($_GET['don'])
-    {
-    	case "tint":
-    	$valeur = 2;
-    	$nom = "douche";
-    	break;
-    	case "meal":
-    	$valeur = 5;
-    	break;
-    	case "scissors":
-    	$valeur = 10;
-    	break;
-    	case "gift":
-    	$valeur = 17;
-    	break;
-    	case "briefcase":
-    	$valeur = 25;
-    	break;
-    }
+if (isset($url['query'])){
+
+  switch($_GET['don'])
+  {
+    case "tint":
+    $valeur = 2;
+    $nom = "douche";
+    break;
+    case "meal":
+    $valeur = 5;
+    break;
+    case "scissors":
+    $valeur = 10;
+    break;
+    case "gift":
+    $valeur = 17;
+    break;
+    case "briefcase":
+    $valeur = 25;
+    break;
   }
-  else {
-    $valeur =0;
-  }
-
+}
+else {
+  $valeur =0;
+}
 ?>
 
-<section class="wrapper style1 special">
-    <div id="tone" class="inner">
+<section class="wrapper style2 special">
+    <div id="tone" class="container">
         <header>
             <h2>Je choisis la valeur de mon don</h2>
+            <p>
+              Important : Cette page est désactivée pour l'instant, elle reste en travaux.
+            </p>
         </header>
-    <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
+        <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
         <form method="post" action="">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="clement.vachet@viacesi.fr">
@@ -49,7 +52,7 @@
                 <div class="6u 12u$(xsmall)">
                     <label><input type="number" name="amount" id="don" value="<?php echo $valeur;?>" /> €</label></div>
                 <div class="6u$ 12u$(xsmall)">
-                    <input type="submit" value="Envoyer mon don" class="special" />
+                    <input type="submit" value="Envoyer mon don" class="special disabled" />
                 </div>
             </div>
         </form>
@@ -60,18 +63,18 @@
 
         <footer>
             <ul class="actions">
-                <li><a href="services" class="button">Carte des services</a></li>
+                <li><a href="concept#services" class="button">Carte des services</a></li>
             </ul>
         </footer>
     </div>
 </section>
 
-<section class="wrapper style2 special">
-    <div id="paypal" class="inner">
+<section class="wrapper style3 special">
+    <div id="paypal" class="container">
         <header>
             <h2>Régler via Paypal</h2>
         </header>
-    <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
+        <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">-->
         <form action="" method="post" target="_top">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="suspendons@suspendons.fr">
@@ -88,4 +91,4 @@
     </div>
 </section>
 
-<?php include'footer.php';?>
+<?php include "footer.php";?>

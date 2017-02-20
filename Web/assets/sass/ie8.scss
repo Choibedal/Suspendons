@@ -4,136 +4,186 @@
 @import 'libs/skel';
 
 /*
-	Reflex by Pixelarity
+	Scalar by Pixelarity
 	pixelarity.com | hello@pixelarity.com
 	License: pixelarity.com/license
 */
 
-/* Button */
+$ie-palette-border:		#ddd;
+$ie-palette-border-bg:	#eee;
+$ie-palette-border2:		#444;
+$ie-palette-border2-bg:	#333;
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	button,
-	.button {
-		position: relative;
-		-ms-behavior: url('assets/js/ie/PIE.htc');
+/* Basic */
+
+	hr {
+		border-bottom: solid 2px $ie-palette-border;
 	}
 
-/* Icons */
+	blockquote {
+		border-left: solid 4px $ie-palette-border;
+
+		&.testimonial {
+			p {
+				background: $ie-palette-border2-bg !important;
+
+				&:after {
+					border-top: solid 1em $ie-palette-border2-bg !important;
+				}
+			}
+		}
+	}
+
+	code {
+		background: $ie-palette-border-bg;
+		border: solid 1px $ie-palette-border;
+	}
+
+/* Section/Article */
+
+	header {
+		&.major {
+			&:after {
+				background: $ie-palette-border;
+			}
+		}
+	}
+
+/* Form */
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select,
+	textarea {
+		border: solid 1px $ie-palette-border;
+	}
+
+	.select-wrapper {
+		&:before {
+			color: $ie-palette-border;
+		}
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		line-height: _size(element-height);
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		font-size: 3em;
+		& + label {
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+/* Box */
+
+	.box {
+		border: solid 1px $ie-palette-border;
+	}
+
+/* List */
 
 	ul {
-		&.icons {
+		&.alt {
 			li {
-				.icon {
-					&:before {
-						border: 0;
+				border-top: solid 1px $ie-palette-border;
+			}
+		}
+	}
+
+/* Table */
+
+	.table-wrapper {
+		-webkit-overflow-scrolling: touch;
+		overflow-x: auto;
+	}
+
+	table {
+		tbody {
+			tr {
+				border: solid 1px $ie-palette-border;
+				border-left: 0;
+				border-right: 0;
+			}
+		}
+
+		thead {
+			border-bottom: solid 2px $ie-palette-border;
+		}
+
+		tfoot {
+			border-top: solid 2px $ie-palette-border;
+		}
+
+		&.alt {
+			tbody {
+				tr {
+					td {
+						border: solid 1px $ie-palette-border;
+						border-left-width: 0;
+						border-top-width: 0;
 					}
 				}
 			}
+		}
+	}
 
-			&.major {
-				li {
-					padding: 0.75em;
+/* Feature */
 
-					.icon {
-						&:before {
-							font-size: 4em;
-							width: 1.5em;
-							height: 1.5em;
-							line-height: 1.5em;
-						}
-					}
-				}
-			}
+	.feature {
+		&:before {
+			background: $ie-palette-border;
+		}
+	}
+
+/* Tree */
+
+	.tree {
+		margin: 0;
+		padding: 0;
+
+		&:before,
+		&:after {
+			display: none;
 		}
 	}
 
 /* Wrapper */
 
 	.wrapper {
-		&.featured {
-			> .inner {
-				> .image {
-					position: relative;
-					-ms-behavior: url('assets/js/ie/PIE.htc');
+		&.split {
+			.secondary {
+				& > section {
+					&.even:before {
+						background: #ffffff;
+					}
 
-					img {
-						position: relative;
-						-ms-behavior: url('assets/js/ie/PIE.htc');
+					&.odd:before {
+						background: _palette(bg);
 					}
 				}
 			}
 		}
 	}
 
-/* Header */
+/* Banner */
 
-	#header {
-		ul {
-			li {
-				a[href="#menu"] {
-					$size: 0.8;
-
-					background-color: _palette(fg);
-					-ms-behavior: url('assets/js/ie/PIE.htc');
-					text-indent: 0;
-					color: _palette(bg);
-					text-align: center;
-					padding-left: 0 !important;
-					width: (7.75em / $size);
-					border-radius: (3.75em / $size);
-
-					&:before {
-						display: none;
-					}
-				}
-			}
-		}
+	#banner {
+		-ms-behavior: url('assets/js/ie/backgroundsize.min.htc');
 	}
 
 /* Footer */
 
 	#footer {
-		.copyright {
-			&:before {
-				display: none;
-			}
-		}
-	}
-
-/* Menu */
-
-	#menu {
-		background-color: _palette(invert, bg);
-		color: _palette(invert, fg);
-
-		&:before {
-			display: none;
-		}
-
-		> .close {
-			width: auto;
-			text-indent: 0;
-
-			&:before {
-				display: none;
-			}
-		}
-
-		input[type="submit"],
-		input[type="reset"],
-		input[type="button"],
-		button,
-		.button {
-			color: inherit !important;
-			border-color: inherit !important;
-			background-color: transparent !important;
-
-			&.special {
-				color: inherit !important;
-				border-color: inherit !important;
-				background-color: transparent !important;
+		.icon {
+			&:after {
+				background-color: #ddd;
 			}
 		}
 	}
