@@ -16,7 +16,26 @@
 
         <!-- Content -->
         <section id="content">
-            <form method="post" name="emailform" action="">
+
+            <?php
+            if($_POST["email"]<>''){
+                $name       = $_POST['name'];
+                $email      = $_POST['email'];
+                $subject    = $_POST['subject'];
+                $message    = $_POST['message'];
+
+                $header = "From: $email \r\n";
+                $to                 = 'clement_msn67@hotmail.fr';
+                $subject_header     = 'Contact via le site Suspendons.fr :';
+
+                mail($to,$subject_header.$subject,$message,$header);?>
+                <h1>Votre message a bien été envoyé.</h1>
+                </section>
+                <?php
+            } else {
+            ?>
+
+            <form method="post" name="emailform" action="contact.php">
                 <div class="row uniform 50%">
                     <div class="6u 12u$(xsmall)">
                         <input type="text" name="name" id="name" value="" placeholder="NOM / Prénom" required />
@@ -53,5 +72,8 @@
 
     </div>
 </div>
+    <?php
+}
+?>
 
 <?php include "footer.php";?>

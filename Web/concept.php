@@ -102,7 +102,7 @@ include "header.php";
                 <tr>
                     <!--<td><a href="don?don=scissors">Coupe de cheveux / barbe</a></td>-->
                     <td>Coupe de cheveux / barbe</td>
-                    <td>Reprendre goût à la vie, c'est d'abord reprendre confiance en soir</td>
+                    <td>Reprendre goût à la vie, c'est d'abord reprendre confiance en soi</td>
                     <td>10€</td>
                 </tr>
                 <tr>
@@ -123,9 +123,6 @@ include "header.php";
         <!--<p>Ces prix sont indicatifs, il vous est possible de : <a href="don">choisir le montant de votre don.</p></a>-->
         <p>Ces prix sont indicatifs, il vous est possible de : choisir le montant de votre don.</p>
 
-        <p>
-            Vous pouvez offrir un sandwich, une séance chez le coiffeur, un hébergement d'une nuit, etc ...
-        </p>
     </div>
 </section>
 
