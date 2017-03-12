@@ -35,6 +35,7 @@
 	    $username 		= 	"clementvclsuspen";
 	    $password 		= 	"Suspencma1";
 	    $dbname 		= 	"clementvclsuspen";
+
 	    //Debug
 	    /*$servername 	= 	"localhost";
 	    $username 		= 	"root";

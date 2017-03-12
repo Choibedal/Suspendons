@@ -56,7 +56,7 @@
             },
             center: myLatlng, // Centre the Map to our coordinates variable
             mapTypeId: google.maps.MapTypeId.ROADMAP, // Set the type of Map
-            scrollwheel: true, // Disable Mouse Scroll zooming (Essential for responsive sites!)
+            scrollwheel: false, // Disable Mouse Scroll zooming (Essential for responsive sites!)
             // All of the below are set to true by default, so simply remove if set to true:
             panControl: false, // Set to false to disable
             mapTypeControl: false, // Disable Map/Satellite switch
@@ -95,13 +95,6 @@
             var position = codeAddress(entry);
             console.log(position);
         });
-
-
-
-        //addMarkerInfos(48.582641, 7.743370, "La Petite Pause Strasbourg Centre", "47 B Rue du Fossé des Tanneurs");
-        //addMarkerInfos(48.583932, 7.746764, "Kohler-Rehm", "13 Rue des Grandes Arcades");
-        //addMarkerInfos(48.581853, 7.749591, "Brasserie Au Dauphin", "13 Place de la Cathédrale");
-        //addMarkerInfos(48.581177, 7.746072, "La Chaîne d'Or", "134 Grand Rue");
     }
 
     function codeAddress(entry) {
@@ -163,9 +156,9 @@
                             <?php
                       foreach ($partners as $key => $partner)
                       {
-                          echo "<li>";
+                          echo "<li class='unstyle'>";
 
-                          echo '<a href="#" onclick="openMarkerOnClick('. $key .');">'. $partner["name"] ."</a>";
+                          echo '<a class="map-link" href="#" onclick="openMarkerOnClick('. $key .');">'. $partner["name"] .": </a>";
                           echo "</br>";
                           echo $partner["address"];
 

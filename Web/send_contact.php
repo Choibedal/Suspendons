@@ -1,70 +1,46 @@
 <?php
-$title = "Envoi de Mail";
+/**
+ * Created by PhpStorm.
+ * User: KooPa
+ * Date: 11/03/2017
+ * Time: 21:11
+ */
 
-if (isset($_POST['name']))
-$name       = $_POST['name'];
+phpversion();
+echo "null";
+print_r($_POST);
+date_default_timezone_set('UTC');
+$destinataire = "clement_msn67@hotmail.fr";
+echo "zero";
 
-if (isset($_POST['email']))
-$email      = $_POST['email'];
-
-if (isset($_POST['subject']))
-$subject    = $_POST['subject'];
-
-if (isset($_POST['message']))
-$message    = $_POST['message'];
-
-if (isset($_POST['g-recaptcha-response']))
-$captcha    = $_POST['g-recaptcha-response'];
-
-$from = 'Contact depuis le formulaire Suspendons.fr :  '.$subject."\n\nContent-Type: text/plain; charset=\"utf-8\"\r\n" . 'X-Mailer:PHP/'.phpversion();
-$to   = 'clement.vachet@viacesi.fr;maxime.rifflart@viacesi.fr;axel.gauvrit@viacesi.fr';
-
-$secretKey = '6LeuVBUUAAAAAD-Z7ZpbfUrST7aLJwK9ezONmBKp';
-$ip = $_SERVER['REMOTE_ADDR'];
-
-$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
-$responseKeys = json_decode($response,true);
-
-$body = "De : $name\n E-mail: $email\n Message:\n $message";
-
-
-if ($_POST['submit']) {
-    include'header.php'; ?>
-
-<!-- Main-->
-<div id="main" class="wrapper style3">
-    <div class="container">
-        <header class="major">
-            <h2>Contact</h2>
-            <p>Merci de nous avoir contacté.</p>
-        </header>
-
-        <!-- Content -->
-        <section id="content" class="special">
-
-            <?php
-
-            if(!$captcha){
-                echo '<p>Merci de valider le reCAPTCHA, veuillez cliquer ici pour un <a href="contact.php">retour au formulaire</a></p>';
-                exit;
-            }
-
-            if(intval($responseKeys["success"]) !== 1) {
-                echo '<p>Merci de valider le reCAPTCHA, veuillez cliquer ici pour un <a href="contact.php">retour au formulaire</a></p>';
-            }else if (mail ($to, $subject, $body, $from)) {
-                    echo '<p>Votre message nous a bien été envoyé, merci !</p>';
-                }
-                else {
-                    echo '<p>Quelque chose n\'a pas fonctionné, merci de réessayer.</p>';
-                }
-            }
-
-
-            ?>
-
-        </section>
-    </div>
-</div>
-        <?php
-        include 'footer.php';
+if(isset($_POST['email']))
+{
+    echo "first step";
+    $from = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $date = date('l j F Y h:i:s A');
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+    $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
+    $message = "Vous avez un message de ".$from." à ".$date."<br/><br/>".htmlspecialchars($_POST['message']);
+    echo "second";
+    mail($destinataire,"Message reçu depuis Suspendons.fr - " . $subject,$message,$headers);
+    echo "message sent";
+    if(isset($_POST['copy']))
+    {
+        if($_POST['copy']==true)
+        {
+            $destinataire = $from;
+            $message = "Voici la copie de votre message : <br/><br/>".htmlspecialchars($_POST['message']);
+            mail($destinataire,"Copie de message envoyé à Suspendon",$message,$headers);
+        }
+    }
+    header('Location:index.php');
 }
+else
+{
+    echo "fail";
+    header('Location:index.php');
+}
+
+?>

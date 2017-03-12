@@ -3162,9 +3162,20 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 }
 
 #map-canvas {
-    width: 60%;
+    width: 54%;
     height: 70%;
     position: absolute;
+}
+
+li.unstyle{
+    list-style: none;
+    padding-bottom: 0.7em;
+}
+
+a.map-link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14pt;
 }
 
 
