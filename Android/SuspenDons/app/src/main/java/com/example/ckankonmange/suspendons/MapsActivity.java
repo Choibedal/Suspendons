@@ -87,31 +87,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     protected void retrievePartners() throws IOException
     {
-        final StringBuilder json = new StringBuilder();
+        PartnerService partnerService = new PartnerService();
+        final StringBuilder json = partnerService.retrievePartners();
+        //TODO: If json = null -> error message
         try
         {
-            //Prod
-            URL url = new URL("http://www.suspendons.fr/query.php");
-            String urlParams = "action=partners";
-
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setDoOutput(true);
-            OutputStream os = conn.getOutputStream();
-            os.write(urlParams.getBytes());
-            os.flush();
-            os.close();
-
-
-            InputStreamReader in = new InputStreamReader(conn.getInputStream());
-            // Read the JSON data into the StringBuilder
-            int read;
-            char[] buff = new char[1024];
-            while ((read = in.read(buff)) != -1)
-            {
-                json.append(buff, 0, read);
-            }
-
-            conn.disconnect();
 
             ArrayList<MarkerOptions> markers = new ArrayList<MarkerOptions>();
 
