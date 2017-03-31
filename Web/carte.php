@@ -3,33 +3,7 @@
   include 'header.php';
 
   include 'query.php';
-
-  // Create connection
-  $conn = getConnection();
-  // Check connection
-  if ($conn->connect_error)
-  {
-      die("Connection failed: " . $conn->connect_error);
-  }
-
-  $sql = "SELECT * FROM UTILISATEUR WHERE UTILISATEUR.IDTYPE = (SELECT id FROM TYPEUSER WHERE TYPEUSER.NOM = 'Partenaire')";
-  //Si tu vire cette ligne ça marche plus, have fun (en gros mysql n'est pas en utf8 et avec ça ça marche)
-  $result = $conn->query($sql);
-
-
-  $partners = array();
-  if ($result->num_rows > 0)
-  {
-      // output data of each row
-      while($row = $result->fetch_assoc())
-      {
-          array_push($partners, [
-              'name' => $row["PSEUDO"],
-              'address' => implode(' ', [$row["ADRESSE"], $row["CP"], $row["VILLE"]])
-          ]);
-      }
-  }
-  $conn->close();
+  $partners = getPartners();
 
 ?>
 
