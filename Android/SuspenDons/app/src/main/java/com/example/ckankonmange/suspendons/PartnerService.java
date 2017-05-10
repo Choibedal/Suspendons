@@ -49,7 +49,7 @@ public class PartnerService
 
             conn.disconnect();
         }
-        catch (Exception e)
+         catch (Exception e)
         {
             Log.e("Error", e.getMessage());
             e.printStackTrace();
@@ -71,8 +71,6 @@ public class PartnerService
         PartnerAdModel partnerAdModel = new PartnerAdModel();
         try
         {
-            ArrayList<MarkerOptions> markers = new ArrayList<MarkerOptions>();
-
             JSONObject jsonRoot = new JSONObject(json.toString());
             for (int i = 0; i < jsonRoot.length(); i++)
             {

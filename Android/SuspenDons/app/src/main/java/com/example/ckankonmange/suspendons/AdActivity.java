@@ -17,6 +17,8 @@ import android.util.Log;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
+import java.io.IOException;
+
 public class AdActivity extends AppCompatActivity
 {
     private String path;
@@ -26,9 +28,12 @@ public class AdActivity extends AppCompatActivity
     private ProgressDialog progressDialog;
     private MediaController mediaControls;
     private PartnerService partnerService = new PartnerService();
+    private PartnerAdModel partnerAdModel = null;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+
+        //Setup
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad);
 
@@ -46,37 +51,69 @@ public class AdActivity extends AppCompatActivity
         // create a progress bar while the video file is loading
         progressDialog = new ProgressDialog(AdActivity.this);
         // set a title for the progress bar
-        progressDialog.setTitle("JavaCodeGeeks Android Video View Example");
+        progressDialog.setTitle("Chargement de la vidéo");
         // set a message for the progress bar
-        progressDialog.setMessage("Loading...");
+        progressDialog.setMessage("Veuillez patienter...");
         //set the progress bar not cancelable on users' touch
         progressDialog.setCancelable(false);
         // show the progress bar
         progressDialog.show();
 
-        try {
-            PartnerAdModel partnerAdModel = partnerService.getRandomPartnerAd();
-            path = partnerAdModel.videoLink;
-            textViewPartnerName.setText(partnerAdModel.partnerName);
-            textViewPartnerLink.setText(partnerAdModel.partnerLink);
 
 
-            //set the media controller in the VideoView
-            myVideoView.setMediaController(mediaControls);
 
-            //set the uri of the video to be played
-            myVideoView.setVideoURI(Uri.parse(path));
+        PartnerAdModel tempPartnerAdModel = new PartnerAdModel();
+        tempPartnerAdModel.partnerLink = "http://www.google.fr";
+        tempPartnerAdModel.partnerName = "Google";
+        tempPartnerAdModel.videoLink = "http://www.androidbegin.com/tutorial/AndroidCommercial.3gp";
+        //Only this work: http://www.androidbegin.com/tutorial/AndroidCommercial.3gp
+        //From http://www.androidbegin.com/tutorial/android-video-streaming-videoview-tutorial/
+        //Ok cool c'est random https://stackoverflow.com/questions/7806261/strange-behavior-of-android-videoview-cant-play-video
+        //J'ai déjà dit que Android c'était de la merde?
 
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
-        }
+        partnerAdModel = tempPartnerAdModel;
+        /*/Get video URL
+        //TODO: Create API on server
+        //TODO: Should work, make the rest wait
 
+            //Do this on another thread
+            new Thread(new Runnable()
+            {
+                public void run()
+                {
+                    try
+                    {
+                        partnerAdModel = partnerService.getRandomPartnerAd();
+                    } catch (Exception e)
+                    {
+                        Log.e("Error", e.getMessage());
+                        e.printStackTrace();
+                        return;
+                    }
+                }
+            }).start();*/
+
+
+
+
+
+        //Set all data
+        path = partnerAdModel.videoLink;
+        textViewPartnerName.setText(partnerAdModel.partnerName);
+        textViewPartnerLink.setText(partnerAdModel.partnerLink);
+        //set the uri of the video to be played
+        myVideoView.setVideoURI(Uri.parse(path));
+        myVideoView.start();
+        //Show video
         myVideoView.requestFocus();
         //we also set an setOnPreparedListener in order to know when the video file is ready for playback
         myVideoView.setOnPreparedListener(new OnPreparedListener() {
 
             public void onPrepared(MediaPlayer mediaPlayer) {
+
+                mediaPlayer.start();
+                //set the media controller in the VideoView
+                myVideoView.setMediaController(mediaControls);
                 // close the progress bar and play the video
                 progressDialog.dismiss();
                 //if we have a position on savedInstanceState, the video playback should start from here
@@ -89,6 +126,22 @@ public class AdActivity extends AppCompatActivity
                 }
             }
         });
+
+
+    myVideoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+        @Override
+        public boolean onError(MediaPlayer mp, int what, int extra) {
+            progressDialog.dismiss();
+            return false;
+        }
+    });
+
+
+
+
+
+
+
 
     }
 
