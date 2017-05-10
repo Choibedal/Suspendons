@@ -78,7 +78,8 @@
             if (status == google.maps.GeocoderStatus.OK) {
                 addMarker(results[0].geometry.location, entry);
             } else {
-                alert('Error: ' + status);
+                //TODO check why this isn't working properly
+                //alert('Error: ' + status);
             }
         });
     }

@@ -88,32 +88,32 @@ include "header.php";
             </thead>
             <tbody>
                 <tr>
-                    <!--<td><a href="don?don=tint">Une douche</a></td>-->
-                    <td>Une douche</td>
+                    <td><a href="don?don=tint">Une douche</a></td>
+<!--                    <td>Une douche</td>-->
                     <td>Un accès à l'hygiène de base dans un hotel / une piscine</td>
                     <td>2€</td>
                 </tr>
                 <tr>
-                    <!--<td><a href="don?don=meal">Plat</a></td>-->
-                    <td>Plat</td>
+                    <td><a href="don?don=meal">Plat</a></td>
+<!--                    <td>Plat</td>-->
                     <td>Un repas chez un de nos restaurateurs partenaires</td>
                     <td>5€</td>
                 </tr>
                 <tr>
-                    <!--<td><a href="don?don=scissors">Coupe de cheveux / barbe</a></td>-->
-                    <td>Coupe de cheveux / barbe</td>
+                    <td><a href="don?don=scissors">Coupe de cheveux / barbe</a></td>
+<!--                    <td>Coupe de cheveux / barbe</td>-->
                     <td>Reprendre goût à la vie, c'est d'abord reprendre confiance en soi</td>
                     <td>10€</td>
                 </tr>
                 <tr>
-                    <!--<td><a href="don?don=gift">Pack bien-être</a></td>-->
-                    <td>Pack bien-être</td>
+                    <td><a href="don?don=gift">Pack bien-être</a></td>
+<!--                    <td>Pack bien-être</td>-->
                     <td>Offrez une journée de confort à un sans-domicile (douche + repas + coiffeur)</td>
                     <td>17€</td>
                 </tr>
                 <tr>
-                    <!--<td><a href="don?don=briefcase">Pack Embauche</a></td>-->
-                    <td>Pack Embauche</td>
+                    <td><a href="don?don=briefcase">Pack Embauche</a></td>
+<!--                    <td>Pack Embauche</td>-->
                     <td>Aidez un sans-domicile à réussir son entretien : douche, repas, coiffeur et pressing.</td>
                     <td>25€</td>
                 </tr>
@@ -121,7 +121,7 @@ include "header.php";
         </table>
 
         <!--<p>Ces prix sont indicatifs, il vous est possible de : <a href="don">choisir le montant de votre don.</p></a>-->
-        <p>Ces prix sont indicatifs, il vous est possible de : choisir le montant de votre don.</p>
+        <p>Ces prix sont indicatifs, il vous est possible de choisir le montant de votre <a href="don">don</a> .</p>
 
     </div>
 </section>

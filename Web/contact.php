@@ -11,7 +11,7 @@
     <div class="container 75%">
         <header class="major">
             <h2>Contact</h2>
-            <p>Si vous souhaitez des précisions ou tout simplement nous contacter, n'hésitez pas.</p>
+            <p>Si vous souhaitez des précisions ou simplement nous contacter, n'hésitez pas.</p>
         </header>
 
         <!-- Content -->
@@ -44,7 +44,7 @@
                     <div class="12u$">
                         <ul class="actions align-center">
                             <li><input type="submit" name="submit" value="Envoyez votre Message" class="special" /></li>
-                            <li><input type="reset" value="Reset Form" /></li>
+                            <li><input type="reset" value="Effacer" /></li>
                         </ul>
                     </div>
                 </div>

@@ -53,14 +53,14 @@ include "header.php";
         <div class="row">
             <div class="3u 12u$(small)">
                 <section class="four first">
-                    <span class="icon major fa-list-alt"></span>
+                    <a href="concept#services" title="Liste des services"><span class="icon major fa-list-alt"></span></a>
                     <h4>Liste des services</h4>
                     <p>Consulter la liste des différents serices disponibles.</p>
                 </section>
             </div>
             <div class="3u 12u$(small)">
                 <section class="four">
-                    <span class="icon major fa-map-o"></span>
+                    <a href="carte" title="Carte des services disponibles"><span class="icon major fa-map-o"></span></a>
                     <h4>Carte des services</h4>
                     <p>Consulter la carte des services disponibles.</p>
                 </section>

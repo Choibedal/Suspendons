@@ -31,12 +31,12 @@ else {
 }
 ?>
 
-<section class="wrapper style2 special">
+<section class="wrapper style4 special">
     <div id="tone" class="container">
         <header>
             <h2>Je choisis la valeur de mon don</h2>
-            <p>
-              Important : Cette page est désactivée pour l'instant, elle reste en travaux.
+            <p class="important">
+              Important : Il n'est pas encore possible de réaliser de dons pour l'association.
             </p>
         </header>
         <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
@@ -69,7 +69,7 @@ else {
     </div>
 </section>
 
-<section class="wrapper style3 special">
+<section class="wrapper style2 special">
     <div id="paypal" class="container">
         <header>
             <h2>Régler via Paypal</h2>
@@ -87,7 +87,15 @@ else {
             <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
         </form>
+    </div>
+</section>
 
+<section class="wrapper style3 special">
+    <div id="video" class="container">
+        <header>
+            <h2>Financer gratuitement en regardant une vidéo publicitaire</h2>
+        </header>
+        <iframe width="100%" height="650px" src="https://www.youtube.com/embed/Y9GCM9DZUJo" frameborder="0" allowfullscreen></iframe>
     </div>
 </section>
 
