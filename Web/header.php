@@ -34,11 +34,11 @@
 			<nav id="nav">
 				<ul>
 					<li <?php if ($filename=="index" || $filename=="") { echo 'class="current"';} ?> ><a href="index">Accueil</a></li>
-					<li <?php if ($filename=="concept" ) { echo 'class="current"';} ?> >							<a href="concept">Concept</a></li>
-					<li <?php if ($filename=="team" ) { echo 'class="current"';} ?> >									<a href="team">L'Equipe</a></li>
-					<!--<li <?php if ($filename=="don" ) { echo 'class="current"';} ?> >									<a href="don">Don</a></li>-->
-					<!--<li <?php if ($filename=="carte" ) { echo 'class="current"';} ?> >								<a href="carte">Carte</a></li>-->
-					<!--<li <?php if ($filename=="faq" ) { echo 'class="current"';} ?> >									<a href="faq">FAQ</a></li>-->
+					<li <?php if ($filename=="concept" ) { echo 'class="current"';} ?> >				<a href="concept">Concept</a></li>
+					<li <?php if ($filename=="team" ) { echo 'class="current"';} ?> >					<a href="team">L'Equipe</a></li>
+					<li <?php if ($filename=="don" ) { echo 'class="current"';} ?> >					<a href="don">Don</a></li>
+					<li <?php if ($filename=="carte" ) { echo 'class="current"';} ?> >					<a href="carte">Carte</a></li>
+					<!--<li <?php if ($filename=="faq" ) { echo 'class="current"';} ?> >				    <a href="faq">FAQ</a></li>-->
 				</ul>
 			</nav>
 		</div>
