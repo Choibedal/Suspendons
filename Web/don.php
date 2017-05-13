@@ -35,9 +35,9 @@ else {
     <div id="tone" class="container">
         <header>
             <h2>Je choisis la valeur de mon don</h2>
-            <p class="important">
+            <!--<p class="important">
               Important : Il n'est pas encore possible de réaliser de dons pour l'association.
-            </p>
+            </p>-->
         </header>
         <!--<form method="post" action="https://www.paypal.com/cgi-bin/webscr"> -->
         <form method="post" action="">
@@ -52,7 +52,7 @@ else {
                 <div class="6u 12u$(xsmall)">
                     <label><input type="number" name="amount" id="don" value="<?php echo $valeur;?>" /> €</label></div>
                 <div class="6u$ 12u$(xsmall)">
-                    <input type="submit" value="Envoyer mon don" class="special disabled" />
+                    <input type="submit" value="Envoyer mon don" class="special" />
                 </div>
             </div>
         </form>
@@ -95,7 +95,9 @@ else {
         <header>
             <h2>Financer gratuitement en regardant une vidéo publicitaire</h2>
         </header>
-        <iframe width="100%" height="650px" src="https://www.youtube.com/embed/Y9GCM9DZUJo" frameborder="0" allowfullscreen></iframe>
+        <p>En effet si vous le souhaitez il vous ai possible de participer gratuitement au projet en regardant une de nos vidéos partenaires.
+            <br/>Pour ce faire merci de cliquer sur l'icône ci-dessous:</p>
+        <a href="video.php" target="_blank" rel="nofollow"><span class="icon major fa-film"></span></a>
     </div>
 </section>
 
