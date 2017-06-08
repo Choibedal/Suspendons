@@ -93,7 +93,7 @@ else {
 <section class="wrapper style3 special">
     <div id="video" class="container">
         <header>
-            <h2>Financer gratuitement en regardant une vidéo publicitaire</h2>
+            <a class="unstyle" href="video.php" target="_blank" rel="nofollow"><h2>Financer gratuitement en regardant une vidéo publicitaire</h2></a>
         </header>
         <p>En effet si vous le souhaitez il vous ai possible de participer gratuitement au projet en regardant une de nos vidéos partenaires.
             <br/>Pour ce faire merci de cliquer sur l'icône ci-dessous:</p>

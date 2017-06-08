@@ -14,10 +14,11 @@ include "header.php";
         </header>
 
         <video id="add" width="80%" height="80%" autoplay>
-            <source src="video/Les%20Tartes%20aux%20Myrtilles.mp4" type="video/mp4">
+            <source src="video/Simply_Market.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <p>Cette vidéo durera : <span id="duration"></span></p>
+
+        <p>Cette vidéo durera : <span id="duration" style="font-weight: bold">02:44</span> minutes</p>
     </div>
 </section>
 
